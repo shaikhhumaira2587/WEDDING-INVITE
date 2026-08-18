@@ -25,11 +25,10 @@
 
 html,body{
 margin:0;
+padding:0;
 width:100%;
-height:100%;
-min-height: 100%; 
-overflow-x: auto;
-overflow-y: auto;
+min-height:100%;
+overflow-x:hidden;
 }
 
 body{
@@ -39,14 +38,19 @@ font-family:'Cormorant Garamond',serif
 }
 
 .screen{
-position:flex;
+position:relative;
 inset:0;
+width:100%;
+min-height:100vh;
+min-height:100svh;
+height:100vh;
+height:100svh;
 display:none;
-align-items: center;
+align-items:center;
 justify-content:center;
 text-align:center;
-padding:28px 20px;
-overflow:auto;
+padding:32px 24px;
+overflow:hidden;
 }
 
 .screen.active{
@@ -126,7 +130,90 @@ width:100%;
 max-width:820px;
 position:relative
 }
+/* ===== PAGE 1 MOBILE LUXURY SPACING ===== */
 
+#s1{
+padding:32px 24px;
+}
+
+#s1 .inner{
+width:100%;
+max-width:620px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+transform:translateY(-8px);
+}
+
+#s1 .arabic{
+font-size:clamp(25px,7vw,34px);
+line-height:1.5;
+margin:0 0 28px;
+white-space:nowrap;
+}
+
+#s1 .eyebrow{
+max-width:340px;
+margin:0 auto;
+font-size:clamp(12px,3.5vw,15px);
+line-height:1.8;
+letter-spacing:3.5px;
+}
+
+#s1 .flourish{
+font-size:42px;
+line-height:1;
+margin:32px 0 34px;
+}
+
+#s1 .small{
+max-width:320px;
+margin:0 auto;
+font-size:clamp(18px,5vw,22px);
+line-height:1.5;
+}
+
+#s1 .primary{
+margin-top:34px;
+padding:14px 34px;
+min-width:235px;
+font-size:20px;
+}
+
+@media (max-width:480px){
+
+#s1{
+padding:28px 22px;
+}
+
+#s1 .inner{
+transform:translateY(-4px);
+}
+
+#s1 .arabic{
+margin-bottom:25px;
+}
+
+#s1 .flourish{
+margin-top:28px;
+margin-bottom:30px;
+}
+
+#s1 .primary{
+margin-top:31px;
+}
+
+}
+
+@media (max-height:700px){
+
+#s1 .inner{
+transform:translateY(-2px) scale(.94);
+}
+
+}
+  
 .arabic{
 font-size:31px;
 color:#e9cfa8;
